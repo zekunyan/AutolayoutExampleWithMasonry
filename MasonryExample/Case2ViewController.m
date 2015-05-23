@@ -77,7 +77,7 @@ static const CGFloat IMAGE_SIZE = 32;
     //设定大小
     CGSize imageViewSize = CGSizeMake(IMAGE_SIZE, IMAGE_SIZE);
 
-    //一下分别设置每个imageView的宽高、左边、垂直中心约束，注意约束的对象
+    //分别设置每个imageView的宽高、左边、垂直中心约束，注意约束的对象
     //每个View的左边约束和左边的View的右边相等=。=，有点绕口...
     
     UIImageView *imageView1 = _imageViews[0];
