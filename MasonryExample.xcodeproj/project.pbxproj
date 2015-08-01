@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3F818432AD32F167E1D8B006 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D4615DC879B91FF452B37C /* libPods.a */; };
 		F46ECD961B10452E00FFB893 /* Case2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46ECD951B10452E00FFB893 /* Case2ViewController.m */; };
+		F4A2CE651B6A8FA900739D9D /* Case4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE641B6A8FA900739D9D /* Case4ViewController.m */; };
+		F4A2CE6C1B6A90D500739D9D /* Case4DataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE6B1B6A90D500739D9D /* Case4DataEntity.m */; };
+		F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE6E1B6A921100739D9D /* Case4Cell.m */; };
 		F4C204CB1B107B5200FA4E26 /* Case3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C204CA1B107B5200FA4E26 /* Case3ViewController.m */; };
 		F4FC743D1B0332FE000C6AE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FC743C1B0332FE000C6AE9 /* main.m */; };
 		F4FC74401B0332FE000C6AE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FC743F1B0332FE000C6AE9 /* AppDelegate.m */; };
@@ -35,6 +38,12 @@
 		94D4615DC879B91FF452B37C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46ECD941B10452E00FFB893 /* Case2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case2ViewController.h; sourceTree = "<group>"; };
 		F46ECD951B10452E00FFB893 /* Case2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case2ViewController.m; sourceTree = "<group>"; };
+		F4A2CE631B6A8FA900739D9D /* Case4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case4ViewController.h; sourceTree = "<group>"; };
+		F4A2CE641B6A8FA900739D9D /* Case4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case4ViewController.m; sourceTree = "<group>"; };
+		F4A2CE6A1B6A90D500739D9D /* Case4DataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case4DataEntity.h; sourceTree = "<group>"; };
+		F4A2CE6B1B6A90D500739D9D /* Case4DataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case4DataEntity.m; sourceTree = "<group>"; };
+		F4A2CE6D1B6A921100739D9D /* Case4Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case4Cell.h; sourceTree = "<group>"; };
+		F4A2CE6E1B6A921100739D9D /* Case4Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case4Cell.m; sourceTree = "<group>"; };
 		F4C204C91B107B5200FA4E26 /* Case3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case3ViewController.h; sourceTree = "<group>"; };
 		F4C204CA1B107B5200FA4E26 /* Case3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case3ViewController.m; sourceTree = "<group>"; };
 		F4FC74371B0332FE000C6AE9 /* MasonryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasonryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +97,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F4A2CE661B6A909000739D9D /* Case1 */ = {
+			isa = PBXGroup;
+			children = (
+				F4FC74411B0332FE000C6AE9 /* Case1ViewController.h */,
+				F4FC74421B0332FE000C6AE9 /* Case1ViewController.m */,
+			);
+			name = Case1;
+			sourceTree = "<group>";
+		};
+		F4A2CE671B6A909800739D9D /* Case2 */ = {
+			isa = PBXGroup;
+			children = (
+				F46ECD941B10452E00FFB893 /* Case2ViewController.h */,
+				F46ECD951B10452E00FFB893 /* Case2ViewController.m */,
+			);
+			name = Case2;
+			sourceTree = "<group>";
+		};
+		F4A2CE681B6A909D00739D9D /* Case3 */ = {
+			isa = PBXGroup;
+			children = (
+				F4C204C91B107B5200FA4E26 /* Case3ViewController.h */,
+				F4C204CA1B107B5200FA4E26 /* Case3ViewController.m */,
+			);
+			name = Case3;
+			sourceTree = "<group>";
+		};
+		F4A2CE691B6A90A200739D9D /* Case4 */ = {
+			isa = PBXGroup;
+			children = (
+				F4A2CE631B6A8FA900739D9D /* Case4ViewController.h */,
+				F4A2CE641B6A8FA900739D9D /* Case4ViewController.m */,
+				F4A2CE6A1B6A90D500739D9D /* Case4DataEntity.h */,
+				F4A2CE6B1B6A90D500739D9D /* Case4DataEntity.m */,
+				F4A2CE6D1B6A921100739D9D /* Case4Cell.h */,
+				F4A2CE6E1B6A921100739D9D /* Case4Cell.m */,
+			);
+			name = Case4;
+			sourceTree = "<group>";
+		};
 		F4FC742E1B0332FE000C6AE9 = {
 			isa = PBXGroup;
 			children = (
@@ -111,14 +160,12 @@
 		F4FC74391B0332FE000C6AE9 /* MasonryExample */ = {
 			isa = PBXGroup;
 			children = (
+				F4A2CE691B6A90A200739D9D /* Case4 */,
+				F4A2CE681B6A909D00739D9D /* Case3 */,
+				F4A2CE671B6A909800739D9D /* Case2 */,
+				F4A2CE661B6A909000739D9D /* Case1 */,
 				F4FC743E1B0332FE000C6AE9 /* AppDelegate.h */,
 				F4FC743F1B0332FE000C6AE9 /* AppDelegate.m */,
-				F4FC74411B0332FE000C6AE9 /* Case1ViewController.h */,
-				F4FC74421B0332FE000C6AE9 /* Case1ViewController.m */,
-				F46ECD941B10452E00FFB893 /* Case2ViewController.h */,
-				F46ECD951B10452E00FFB893 /* Case2ViewController.m */,
-				F4C204C91B107B5200FA4E26 /* Case3ViewController.h */,
-				F4C204CA1B107B5200FA4E26 /* Case3ViewController.m */,
 				F4FC74471B0332FE000C6AE9 /* Images.xcassets */,
 				F4FC74491B0332FE000C6AE9 /* LaunchScreen.xib */,
 				F4FC74441B0332FE000C6AE9 /* Main.storyboard */,
@@ -289,9 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C204CB1B107B5200FA4E26 /* Case3ViewController.m in Sources */,
+				F4A2CE651B6A8FA900739D9D /* Case4ViewController.m in Sources */,
 				F4FC74431B0332FE000C6AE9 /* Case1ViewController.m in Sources */,
 				F46ECD961B10452E00FFB893 /* Case2ViewController.m in Sources */,
+				F4A2CE6C1B6A90D500739D9D /* Case4DataEntity.m in Sources */,
 				F4FC74401B0332FE000C6AE9 /* AppDelegate.m in Sources */,
+				F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */,
 				F4FC743D1B0332FE000C6AE9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
