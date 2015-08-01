@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Case4DataEntity;
+
 @interface Case4Cell : UITableViewCell
+
+- (void)setupData:(Case4DataEntity *)dataEntity;
 
 @end
