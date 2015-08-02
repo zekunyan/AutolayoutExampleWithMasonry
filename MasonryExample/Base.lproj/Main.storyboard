@@ -341,10 +341,10 @@
                                     <action selector="showOrHideBottomBar:" destination="z5e-ob-Q1E" eventType="touchUpInside" id="yao-Sb-n05"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直接使用top(bottom)LayoutGuide的length属性，避免强制转化成UIView带来的风险" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-7G-7bI">
-                                <rect key="frame" x="16" y="191" width="288" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用top(bottom)LayoutGuide确定当前ViewController的最佳显示范围。并且直接使用length属性，避免强制转换成UIView所带来的风险。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-7G-7bI">
+                                <rect key="frame" x="16" y="169" width="288" height="92"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="1d6-M2-qSw"/>
+                                    <constraint firstAttribute="height" constant="92" id="1d6-M2-qSw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
