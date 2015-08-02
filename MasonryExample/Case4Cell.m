@@ -44,7 +44,6 @@
 - (void)initView {
     // Avatar头像
     _avatarImageView = [UIImageView new];
-    _avatarImageView.backgroundColor = [UIColor lightGrayColor];
     [self.contentView addSubview:_avatarImageView];
     [_avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.and.height.equalTo(@44);
@@ -53,7 +52,6 @@
 
     // Title - 单行
     _titleLabel = [UILabel new];
-    _titleLabel.backgroundColor = [UIColor lightGrayColor];
     [self.contentView addSubview:_titleLabel];
 
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -69,7 +67,6 @@
     // Content - 多行
     _contentLabel = [UILabel new];
     _contentLabel.numberOfLines = 0;
-    _contentLabel.backgroundColor = [UIColor lightGrayColor];
     _contentLabel.preferredMaxLayoutWidth = preferredMaxWidth; // 多行时必须设置
     [self.contentView addSubview:_contentLabel];
 
