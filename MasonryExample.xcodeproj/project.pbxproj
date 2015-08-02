@@ -13,11 +13,14 @@
 		F4A2CE6C1B6A90D500739D9D /* Case4DataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE6B1B6A90D500739D9D /* Case4DataEntity.m */; };
 		F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE6E1B6A921100739D9D /* Case4Cell.m */; };
 		F4C204CB1B107B5200FA4E26 /* Case3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C204CA1B107B5200FA4E26 /* Case3ViewController.m */; };
+		F4D738B91B6E144100CCA111 /* Case5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D738B81B6E144100CCA111 /* Case5ViewController.m */; };
+		F4D738BD1B6E3F0800CCA111 /* Case6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D738BC1B6E3F0800CCA111 /* Case6ViewController.m */; };
+		F4D738C01B6E433900CCA111 /* Case6ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D738BF1B6E433900CCA111 /* Case6ItemView.m */; };
+		F4D738C21B6E44D900CCA111 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D738C11B6E44D900CCA111 /* Images.xcassets */; };
 		F4FC743D1B0332FE000C6AE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FC743C1B0332FE000C6AE9 /* main.m */; };
 		F4FC74401B0332FE000C6AE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FC743F1B0332FE000C6AE9 /* AppDelegate.m */; };
 		F4FC74431B0332FE000C6AE9 /* Case1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FC74421B0332FE000C6AE9 /* Case1ViewController.m */; };
 		F4FC74461B0332FE000C6AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4FC74441B0332FE000C6AE9 /* Main.storyboard */; };
-		F4FC74481B0332FE000C6AE9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FC74471B0332FE000C6AE9 /* Images.xcassets */; };
 		F4FC744B1B0332FE000C6AE9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FC74491B0332FE000C6AE9 /* LaunchScreen.xib */; };
 		F4FC74571B0332FE000C6AE9 /* MasonryExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FC74561B0332FE000C6AE9 /* MasonryExampleTests.m */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,13 @@
 		F4A2CE6E1B6A921100739D9D /* Case4Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case4Cell.m; sourceTree = "<group>"; };
 		F4C204C91B107B5200FA4E26 /* Case3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case3ViewController.h; sourceTree = "<group>"; };
 		F4C204CA1B107B5200FA4E26 /* Case3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case3ViewController.m; sourceTree = "<group>"; };
+		F4D738B71B6E144100CCA111 /* Case5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case5ViewController.h; sourceTree = "<group>"; };
+		F4D738B81B6E144100CCA111 /* Case5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case5ViewController.m; sourceTree = "<group>"; };
+		F4D738BB1B6E3F0800CCA111 /* Case6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case6ViewController.h; sourceTree = "<group>"; };
+		F4D738BC1B6E3F0800CCA111 /* Case6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case6ViewController.m; sourceTree = "<group>"; };
+		F4D738BE1B6E433900CCA111 /* Case6ItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case6ItemView.h; sourceTree = "<group>"; };
+		F4D738BF1B6E433900CCA111 /* Case6ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case6ItemView.m; sourceTree = "<group>"; };
+		F4D738C11B6E44D900CCA111 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4FC74371B0332FE000C6AE9 /* MasonryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasonryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FC743B1B0332FE000C6AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4FC743C1B0332FE000C6AE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,7 +64,6 @@
 		F4FC74411B0332FE000C6AE9 /* Case1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Case1ViewController.h; sourceTree = "<group>"; };
 		F4FC74421B0332FE000C6AE9 /* Case1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Case1ViewController.m; sourceTree = "<group>"; };
 		F4FC74451B0332FE000C6AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4FC74471B0332FE000C6AE9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4FC744A1B0332FE000C6AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F4FC74501B0332FE000C6AE9 /* MasonryExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasonryExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FC74551B0332FE000C6AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +146,26 @@
 			name = Case4;
 			sourceTree = "<group>";
 		};
+		F4D738B61B6E142100CCA111 /* Case5 */ = {
+			isa = PBXGroup;
+			children = (
+				F4D738B71B6E144100CCA111 /* Case5ViewController.h */,
+				F4D738B81B6E144100CCA111 /* Case5ViewController.m */,
+			);
+			name = Case5;
+			sourceTree = "<group>";
+		};
+		F4D738BA1B6E3EFD00CCA111 /* Case6 */ = {
+			isa = PBXGroup;
+			children = (
+				F4D738BB1B6E3F0800CCA111 /* Case6ViewController.h */,
+				F4D738BC1B6E3F0800CCA111 /* Case6ViewController.m */,
+				F4D738BE1B6E433900CCA111 /* Case6ItemView.h */,
+				F4D738BF1B6E433900CCA111 /* Case6ItemView.m */,
+			);
+			name = Case6;
+			sourceTree = "<group>";
+		};
 		F4FC742E1B0332FE000C6AE9 = {
 			isa = PBXGroup;
 			children = (
@@ -160,13 +189,15 @@
 		F4FC74391B0332FE000C6AE9 /* MasonryExample */ = {
 			isa = PBXGroup;
 			children = (
+				F4D738C11B6E44D900CCA111 /* Images.xcassets */,
+				F4D738BA1B6E3EFD00CCA111 /* Case6 */,
+				F4D738B61B6E142100CCA111 /* Case5 */,
 				F4A2CE691B6A90A200739D9D /* Case4 */,
 				F4A2CE681B6A909D00739D9D /* Case3 */,
 				F4A2CE671B6A909800739D9D /* Case2 */,
 				F4A2CE661B6A909000739D9D /* Case1 */,
 				F4FC743E1B0332FE000C6AE9 /* AppDelegate.h */,
 				F4FC743F1B0332FE000C6AE9 /* AppDelegate.m */,
-				F4FC74471B0332FE000C6AE9 /* Images.xcassets */,
 				F4FC74491B0332FE000C6AE9 /* LaunchScreen.xib */,
 				F4FC74441B0332FE000C6AE9 /* Main.storyboard */,
 				F4FC743A1B0332FE000C6AE9 /* Supporting Files */,
@@ -282,9 +313,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D738C21B6E44D900CCA111 /* Images.xcassets in Resources */,
 				F4FC74461B0332FE000C6AE9 /* Main.storyboard in Resources */,
 				F4FC744B1B0332FE000C6AE9 /* LaunchScreen.xib in Resources */,
-				F4FC74481B0332FE000C6AE9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,11 +368,14 @@
 			files = (
 				F4C204CB1B107B5200FA4E26 /* Case3ViewController.m in Sources */,
 				F4A2CE651B6A8FA900739D9D /* Case4ViewController.m in Sources */,
+				F4D738C01B6E433900CCA111 /* Case6ItemView.m in Sources */,
 				F4FC74431B0332FE000C6AE9 /* Case1ViewController.m in Sources */,
 				F46ECD961B10452E00FFB893 /* Case2ViewController.m in Sources */,
 				F4A2CE6C1B6A90D500739D9D /* Case4DataEntity.m in Sources */,
+				F4D738BD1B6E3F0800CCA111 /* Case6ViewController.m in Sources */,
 				F4FC74401B0332FE000C6AE9 /* AppDelegate.m in Sources */,
 				F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */,
+				F4D738B91B6E144100CCA111 /* Case5ViewController.m in Sources */,
 				F4FC743D1B0332FE000C6AE9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,13 +28,11 @@
     _tableView.dataSource = self;
     _tableView.estimatedRowHeight = 80.0f;
 
-    // Register cell
+    // 注册Cell
     [_tableView registerClass:[Case4Cell class] forCellReuseIdentifier:NSStringFromClass([Case4Cell class])];
 
-    // Generate data
     [self generateData];
 
-    // Refresh
     [_tableView reloadData];
 }
 
@@ -58,18 +56,19 @@
         templateCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([Case4Cell class])];
     });
 
-    // Get data
+    // 获取对应的数据
     Case4DataEntity *dataEntity = _data[(NSUInteger) indexPath.row];
 
-    // Set data
+    // 填充数据
     [templateCell setupData:dataEntity];
 
-    // Get height
+    // 判断高度是否已经计算过
     if (dataEntity.cellHeight <= 0) {
+        // 根据当前数据，计算Cell的高度，注意+1
         dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
-        NSLog(@"Calculate height: %d", indexPath.row);
+        NSLog(@"Calculate height: %ld", (long)indexPath.row);
     } else {
-        NSLog(@"Get cache %d", indexPath.row);
+        NSLog(@"Get cache %ld", (long)indexPath.row);
     }
 
     return dataEntity.cellHeight;
@@ -83,6 +82,7 @@
 
 #pragma mark - Private methods
 
+// 生成数据
 - (void)generateData {
     NSMutableArray *tmpData = [NSMutableArray new];
 
@@ -97,6 +97,7 @@
     _data = tmpData;
 }
 
+// 重复text字符串repeat次
 - (NSString *)getText:(NSString *)text withRepeat:(int)repeat {
     NSMutableString *tmpText = [NSMutableString new];
 
