@@ -27,6 +27,11 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.estimatedRowHeight = 80.0f;
+    
+    // iOS 8 的Self-sizing特性
+    if ([UIDevice currentDevice].systemVersion.integerValue > 7) {
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+    }
 
     // 注册Cell
     [_tableView registerClass:[Case4Cell class] forCellReuseIdentifier:NSStringFromClass([Case4Cell class])];
@@ -49,29 +54,34 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static Case4Cell *templateCell;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        templateCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([Case4Cell class])];
-    });
-
-    // 获取对应的数据
-    Case4DataEntity *dataEntity = _data[(NSUInteger) indexPath.row];
-
-    // 填充数据
-    [templateCell setupData:dataEntity];
-
-    // 判断高度是否已经计算过
-    if (dataEntity.cellHeight <= 0) {
-        // 根据当前数据，计算Cell的高度，注意+1
-        dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
-        NSLog(@"Calculate height: %ld", (long)indexPath.row);
+    if ([UIDevice currentDevice].systemVersion.integerValue > 7) {
+        // iOS 8 的Self-sizing特性
+        return UITableViewAutomaticDimension;
     } else {
-        NSLog(@"Get cache %ld", (long)indexPath.row);
+        static Case4Cell *templateCell;
+        
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            templateCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([Case4Cell class])];
+        });
+        
+        // 获取对应的数据
+        Case4DataEntity *dataEntity = _data[(NSUInteger) indexPath.row];
+        
+        // 填充数据
+        [templateCell setupData:dataEntity];
+        
+        // 判断高度是否已经计算过
+        if (dataEntity.cellHeight <= 0) {
+            // 根据当前数据，计算Cell的高度，注意+1
+            dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
+            NSLog(@"Calculate height: %ld", (long)indexPath.row);
+        } else {
+            NSLog(@"Get cache %ld", (long)indexPath.row);
+        }
+        
+        return dataEntity.cellHeight;
     }
-
-    return dataEntity.cellHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
