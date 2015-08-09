@@ -10,10 +10,13 @@
 #import "Case4Cell.h"
 #import "Case4DataEntity.h"
 
-@interface Case4ViewController () <UITableViewDelegate, UITableViewDataSource>
-@property(weak, nonatomic) IBOutlet UITableView *tableView;
+// 注释掉下面的宏定义，就是用“传统”的模板Cell计算高度
+//#define IOS_8_NEW_FEATURE_SELF_SIZING
 
-@property(nonatomic, strong) NSArray *data;
+@interface Case4ViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *data;
 
 @end
 
@@ -27,11 +30,13 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.estimatedRowHeight = 80.0f;
-    
+
+#ifdef IOS_8_NEW_FEATURE_SELF_SIZING
     // iOS 8 的Self-sizing特性
     if ([UIDevice currentDevice].systemVersion.integerValue > 7) {
         _tableView.rowHeight = UITableViewAutomaticDimension;
     }
+#endif
 
     // 注册Cell
     [_tableView registerClass:[Case4Cell class] forCellReuseIdentifier:NSStringFromClass([Case4Cell class])];
@@ -54,34 +59,35 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([UIDevice currentDevice].systemVersion.integerValue > 7) {
-        // iOS 8 的Self-sizing特性
-        return UITableViewAutomaticDimension;
+
+#ifdef IOS_8_NEW_FEATURE_SELF_SIZING
+    // iOS 8 的Self-sizing特性
+    return UITableViewAutomaticDimension;
+#else
+    static Case4Cell *templateCell;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        templateCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([Case4Cell class])];
+    });
+
+    // 获取对应的数据
+    Case4DataEntity *dataEntity = _data[(NSUInteger) indexPath.row];
+
+    // 填充数据
+    [templateCell setupData:dataEntity];
+
+    // 判断高度是否已经计算过
+    if (dataEntity.cellHeight <= 0) {
+        // 根据当前数据，计算Cell的高度，注意+1
+        dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
+        NSLog(@"Calculate height: %ld", (long) indexPath.row);
     } else {
-        static Case4Cell *templateCell;
-        
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            templateCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([Case4Cell class])];
-        });
-        
-        // 获取对应的数据
-        Case4DataEntity *dataEntity = _data[(NSUInteger) indexPath.row];
-        
-        // 填充数据
-        [templateCell setupData:dataEntity];
-        
-        // 判断高度是否已经计算过
-        if (dataEntity.cellHeight <= 0) {
-            // 根据当前数据，计算Cell的高度，注意+1
-            dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
-            NSLog(@"Calculate height: %ld", (long)indexPath.row);
-        } else {
-            NSLog(@"Get cache %ld", (long)indexPath.row);
-        }
-        
-        return dataEntity.cellHeight;
+        NSLog(@"Get cache %ld", (long) indexPath.row);
     }
+
+    return dataEntity.cellHeight;
+#endif
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

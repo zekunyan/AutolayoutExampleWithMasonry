@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XBC-uH-vAh">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -222,13 +223,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="变高的Cell+简单的高度缓存" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1q-eI-HAd" userLabel="instructionLabel">
-                                <rect key="frame" x="16" y="20" width="288" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1q-eI-HAd" userLabel="instructionLabel">
+                                <rect key="frame" x="16" y="20" width="288" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DvT-OK-ArF"/>
-                                    <constraint firstAttribute="height" constant="30" id="nOc-zo-8pc"/>
+                                    <constraint firstAttribute="height" constant="76" id="nOc-zo-8pc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <string key="text">变高的Cell+简单的高度缓存
+方法1: 调用systemLayoutSizeFittingSize: 获取高度。
+方法2: 使用iOS8的Self-Sizing特性</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -246,7 +250,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Rqo-68-hJM">
-                                <rect key="frame" x="16" y="58" width="288" height="464"/>
+                                <rect key="frame" x="16" y="99" width="288" height="431"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
@@ -256,9 +260,9 @@
                             <constraint firstItem="P1q-eI-HAd" firstAttribute="trailing" secondItem="qB6-oh-e1F" secondAttribute="trailingMargin" id="4Ld-QS-Ubq"/>
                             <constraint firstItem="P1q-eI-HAd" firstAttribute="leading" secondItem="qB6-oh-e1F" secondAttribute="leadingMargin" id="Io1-rc-fKP"/>
                             <constraint firstItem="m2P-jY-nH8" firstAttribute="top" secondItem="kLW-Yp-esd" secondAttribute="bottom" constant="8" id="VXx-Yl-MdQ"/>
-                            <constraint firstItem="Rqo-68-hJM" firstAttribute="top" secondItem="P1q-eI-HAd" secondAttribute="bottom" constant="8" id="aZv-8m-dCH"/>
+                            <constraint firstItem="Rqo-68-hJM" firstAttribute="top" secondItem="P1q-eI-HAd" secondAttribute="bottom" constant="3" id="aZv-8m-dCH"/>
                             <constraint firstItem="kLW-Yp-esd" firstAttribute="trailing" secondItem="qB6-oh-e1F" secondAttribute="trailingMargin" id="fDL-Ti-lwm"/>
-                            <constraint firstItem="kLW-Yp-esd" firstAttribute="top" secondItem="Rqo-68-hJM" secondAttribute="bottom" constant="8" id="kew-cN-YlA"/>
+                            <constraint firstItem="kLW-Yp-esd" firstAttribute="top" secondItem="Rqo-68-hJM" secondAttribute="bottom" id="kew-cN-YlA"/>
                             <constraint firstItem="kLW-Yp-esd" firstAttribute="leading" secondItem="qB6-oh-e1F" secondAttribute="leadingMargin" id="pzy-V0-TBv"/>
                             <constraint firstItem="P1q-eI-HAd" firstAttribute="top" secondItem="tqv-th-R3Z" secondAttribute="bottom" id="v2Q-ST-m4M"/>
                             <constraint firstItem="Rqo-68-hJM" firstAttribute="leading" secondItem="qB6-oh-e1F" secondAttribute="leadingMargin" id="z4W-I9-zIs"/>
@@ -306,7 +310,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCl-Q4-FW1">
-                                <rect key="frame" x="16" y="269" width="288" height="30"/>
+                                <rect key="frame" x="16" y="325" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vmR-lT-Kdp"/>
                                 </constraints>
@@ -318,7 +322,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-C1-fk2">
-                                <rect key="frame" x="16" y="345" width="288" height="30"/>
+                                <rect key="frame" x="16" y="401" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lqe-qb-exp"/>
                                 </constraints>
@@ -330,7 +334,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuV-Dx-TPg">
-                                <rect key="frame" x="16" y="307" width="288" height="30"/>
+                                <rect key="frame" x="16" y="363" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VeL-zf-qGh"/>
                                 </constraints>
@@ -341,12 +345,17 @@
                                     <action selector="showOrHideBottomBar:" destination="z5e-ob-Q1E" eventType="touchUpInside" id="yao-Sb-n05"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用top(bottom)LayoutGuide确定当前ViewController的最佳显示范围。并且直接使用length属性，避免强制转换成UIView所带来的风险。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-7G-7bI">
-                                <rect key="frame" x="16" y="169" width="288" height="92"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-7G-7bI">
+                                <rect key="frame" x="16" y="137" width="288" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="1d6-M2-qSw"/>
+                                    <constraint firstAttribute="height" constant="180" id="1d6-M2-qSw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <string key="text">使用top(bottom)LayoutGuide确定当前ViewController的最佳显示范围。
+
+方法1: 直接使用length属性，避免强制转换成UIView所带来的风险。
+
+方法2: 使用新的mas_topLayoutGuide和mas_bottomLayoutGuide</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -356,7 +365,7 @@
                             <constraint firstItem="nuV-Dx-TPg" firstAttribute="leading" secondItem="nIi-TN-XaZ" secondAttribute="leadingMargin" id="7Ty-zd-TKh"/>
                             <constraint firstItem="PXy-7G-7bI" firstAttribute="leading" secondItem="nIi-TN-XaZ" secondAttribute="leadingMargin" id="ANl-Mr-9ec"/>
                             <constraint firstItem="oCl-Q4-FW1" firstAttribute="trailing" secondItem="nIi-TN-XaZ" secondAttribute="trailingMargin" id="CGR-oK-qIA"/>
-                            <constraint firstAttribute="centerY" secondItem="oCl-Q4-FW1" secondAttribute="centerY" id="E0a-b8-e4z"/>
+                            <constraint firstAttribute="centerY" secondItem="oCl-Q4-FW1" secondAttribute="centerY" constant="-56" id="E0a-b8-e4z"/>
                             <constraint firstItem="nuV-Dx-TPg" firstAttribute="trailing" secondItem="nIi-TN-XaZ" secondAttribute="trailingMargin" id="FiX-IB-mgg"/>
                             <constraint firstItem="oCl-Q4-FW1" firstAttribute="leading" secondItem="nIi-TN-XaZ" secondAttribute="leadingMargin" id="GDt-Ll-fBD"/>
                             <constraint firstItem="nfb-C1-fk2" firstAttribute="trailing" secondItem="nIi-TN-XaZ" secondAttribute="trailingMargin" id="Oik-7C-E3U"/>
