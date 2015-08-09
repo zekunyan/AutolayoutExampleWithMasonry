@@ -12,4 +12,4 @@
 ![image](http://7nj2iz.com1.z0.glb.clouddn.com/blog_autolayout_example_with_masonry2_1.gif)
 
 #### Blog
-Coming soon.
+[http://tutuge.me/2015/08/08/autolayout-example-with-masonry2/](http://tutuge.me/2015/08/08/autolayout-example-with-masonry2/)
