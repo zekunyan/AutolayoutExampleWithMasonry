@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F818432AD32F167E1D8B006 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D4615DC879B91FF452B37C /* libPods.a */; };
 		F46ECD961B10452E00FFB893 /* Case2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46ECD951B10452E00FFB893 /* Case2ViewController.m */; };
+		F48786DD1C0AECD300003A6C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48786DC1C0AECD300003A6C /* MainViewController.m */; };
 		F4A2CE651B6A8FA900739D9D /* Case4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE641B6A8FA900739D9D /* Case4ViewController.m */; };
 		F4A2CE6C1B6A90D500739D9D /* Case4DataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE6B1B6A90D500739D9D /* Case4DataEntity.m */; };
 		F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE6E1B6A921100739D9D /* Case4Cell.m */; };
@@ -41,6 +42,8 @@
 		94D4615DC879B91FF452B37C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46ECD941B10452E00FFB893 /* Case2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case2ViewController.h; sourceTree = "<group>"; };
 		F46ECD951B10452E00FFB893 /* Case2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case2ViewController.m; sourceTree = "<group>"; };
+		F48786DB1C0AECD300003A6C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F48786DC1C0AECD300003A6C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F4A2CE631B6A8FA900739D9D /* Case4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case4ViewController.h; sourceTree = "<group>"; };
 		F4A2CE641B6A8FA900739D9D /* Case4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case4ViewController.m; sourceTree = "<group>"; };
 		F4A2CE6A1B6A90D500739D9D /* Case4DataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case4DataEntity.h; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				F4FC74491B0332FE000C6AE9 /* LaunchScreen.xib */,
 				F4FC74441B0332FE000C6AE9 /* Main.storyboard */,
 				F4FC743A1B0332FE000C6AE9 /* Supporting Files */,
+				F48786DB1C0AECD300003A6C /* MainViewController.h */,
+				F48786DC1C0AECD300003A6C /* MainViewController.m */,
 			);
 			path = MasonryExample;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				F4FC74341B0332FE000C6AE9 /* Frameworks */,
 				F4FC74351B0332FE000C6AE9 /* Resources */,
 				37F6ABB5ECAF444BDE4033BF /* Copy Pods Resources */,
+				E595CE9D9E6BF9088D1D384A /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,6 +365,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E595CE9D9E6BF9088D1D384A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -373,6 +394,7 @@
 				F46ECD961B10452E00FFB893 /* Case2ViewController.m in Sources */,
 				F4A2CE6C1B6A90D500739D9D /* Case4DataEntity.m in Sources */,
 				F4D738BD1B6E3F0800CCA111 /* Case6ViewController.m in Sources */,
+				F48786DD1C0AECD300003A6C /* MainViewController.m in Sources */,
 				F4FC74401B0332FE000C6AE9 /* AppDelegate.m in Sources */,
 				F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */,
 				F4D738B91B6E144100CCA111 /* Case5ViewController.m in Sources */,
@@ -504,7 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MasonryExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -516,7 +538,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MasonryExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

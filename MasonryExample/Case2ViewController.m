@@ -44,10 +44,6 @@ static const CGFloat IMAGE_SIZE = 32;
     }
 }
 
-- (IBAction)back:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 #pragma mark - Private methods
 
 - (void)initContainerView {

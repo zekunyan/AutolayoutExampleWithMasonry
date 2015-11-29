@@ -23,8 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.title = @"Case 5";
+    
+    self.title = @"top(bottom)LayoutGuide";
 
     [self initView];
     

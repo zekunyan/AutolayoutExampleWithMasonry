@@ -35,10 +35,6 @@
     }
 }
 
-- (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 # pragma mark - Private methods
 
 - (void) initView {

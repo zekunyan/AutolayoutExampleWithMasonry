@@ -42,10 +42,6 @@
     }
 }
 
-- (IBAction)back:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 #pragma mark - Private methods
 
 - (void)initViews {
