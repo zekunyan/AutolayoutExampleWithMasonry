@@ -10,6 +10,7 @@
 		3F818432AD32F167E1D8B006 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D4615DC879B91FF452B37C /* libPods.a */; };
 		F46ECD961B10452E00FFB893 /* Case2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46ECD951B10452E00FFB893 /* Case2ViewController.m */; };
 		F48786DD1C0AECD300003A6C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48786DC1C0AECD300003A6C /* MainViewController.m */; };
+		F48786E11C0B60AB00003A6C /* Case7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48786E01C0B60AB00003A6C /* Case7ViewController.m */; };
 		F4A2CE651B6A8FA900739D9D /* Case4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE641B6A8FA900739D9D /* Case4ViewController.m */; };
 		F4A2CE6C1B6A90D500739D9D /* Case4DataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE6B1B6A90D500739D9D /* Case4DataEntity.m */; };
 		F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2CE6E1B6A921100739D9D /* Case4Cell.m */; };
@@ -44,6 +45,8 @@
 		F46ECD951B10452E00FFB893 /* Case2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case2ViewController.m; sourceTree = "<group>"; };
 		F48786DB1C0AECD300003A6C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		F48786DC1C0AECD300003A6C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F48786DF1C0B60AB00003A6C /* Case7ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case7ViewController.h; sourceTree = "<group>"; };
+		F48786E01C0B60AB00003A6C /* Case7ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case7ViewController.m; sourceTree = "<group>"; };
 		F4A2CE631B6A8FA900739D9D /* Case4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case4ViewController.h; sourceTree = "<group>"; };
 		F4A2CE641B6A8FA900739D9D /* Case4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case4ViewController.m; sourceTree = "<group>"; };
 		F4A2CE6A1B6A90D500739D9D /* Case4DataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case4DataEntity.h; sourceTree = "<group>"; };
@@ -107,6 +110,15 @@
 				94D4615DC879B91FF452B37C /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F48786DE1C0B609900003A6C /* Case7 */ = {
+			isa = PBXGroup;
+			children = (
+				F48786DF1C0B60AB00003A6C /* Case7ViewController.h */,
+				F48786E01C0B60AB00003A6C /* Case7ViewController.m */,
+			);
+			name = Case7;
 			sourceTree = "<group>";
 		};
 		F4A2CE661B6A909000739D9D /* Case1 */ = {
@@ -193,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D738C11B6E44D900CCA111 /* Images.xcassets */,
+				F48786DE1C0B609900003A6C /* Case7 */,
 				F4D738BA1B6E3EFD00CCA111 /* Case6 */,
 				F4D738B61B6E142100CCA111 /* Case5 */,
 				F4A2CE691B6A90A200739D9D /* Case4 */,
@@ -399,6 +412,7 @@
 				F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */,
 				F4D738B91B6E144100CCA111 /* Case5ViewController.m in Sources */,
 				F4FC743D1B0332FE000C6AE9 /* main.m in Sources */,
+				F48786E11C0B60AB00003A6C /* Case7ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
