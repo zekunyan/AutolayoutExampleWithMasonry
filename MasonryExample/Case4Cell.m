@@ -15,7 +15,7 @@
 @property(nonatomic, strong) UILabel *titleLabel;
 @property(nonatomic, strong) UILabel *contentLabel;
 
-@property(nonatomic, strong) Case4DataEntity *dataEntity;
+@property(nonatomic, weak) Case4DataEntity *dataEntity;
 @end
 
 @implementation Case4Cell
@@ -62,7 +62,7 @@
     }];
 
     // 计算UILabel的preferredMaxLayoutWidth值，多行时必须设置这个值，否则系统无法决定Label的宽度
-    CGFloat preferredMaxWidth = [UIScreen mainScreen].bounds.size.width - (16 + 4) * 2 - 44 - 4;
+    CGFloat preferredMaxWidth = [UIScreen mainScreen].bounds.size.width - 8;
 
     // Content - 多行
     _contentLabel = [UILabel new];

@@ -9,6 +9,7 @@
 #import "Case4ViewController.h"
 #import "Case4Cell.h"
 #import "Case4DataEntity.h"
+#import "Common.h"
 
 // 注释掉下面的宏定义，就是用“传统”的模板Cell计算高度
 //#define IOS_8_NEW_FEATURE_SELF_SIZING
@@ -68,13 +69,12 @@
     // 获取对应的数据
     Case4DataEntity *dataEntity = _data[(NSUInteger) indexPath.row];
 
-    // 填充数据
-    [templateCell setupData:dataEntity];
-
     // 判断高度是否已经计算过
     if (dataEntity.cellHeight <= 0) {
         // 根据当前数据，计算Cell的高度，注意+1
-        dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
+        dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 0.5f;
+        // 填充数据
+        [templateCell setupData:dataEntity];
         NSLog(@"Calculate height: %ld", (long) indexPath.row);
     } else {
         NSLog(@"Get cache %ld", (long) indexPath.row);
@@ -100,22 +100,11 @@
         Case4DataEntity *dataEntity = [Case4DataEntity new];
         dataEntity.avatar = [UIImage imageNamed:[NSString stringWithFormat:@"bluefaces_%d", (i % 4) + 1]];
         dataEntity.title = [NSString stringWithFormat:@"Title: %d", i];
-        dataEntity.content = [self getText:@"content-" withRepeat:i * 2 + 1];
+        dataEntity.content = [Common getText:@"content-" withRepeat:i * 2 + 1];
         [tmpData addObject:dataEntity];
     }
 
     _data = tmpData;
-}
-
-// 重复text字符串repeat次
-- (NSString *)getText:(NSString *)text withRepeat:(int)repeat {
-    NSMutableString *tmpText = [NSMutableString new];
-
-    for (int i = 0; i < repeat; i++) {
-        [tmpText appendString:text];
-    }
-
-    return tmpText;
 }
 
 @end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3F818432AD32F167E1D8B006 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D4615DC879B91FF452B37C /* libPods.a */; };
+		6EB620F5D4987AA9D5FFFDF3 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB628ED6E403D2F244E7D24 /* Common.m */; };
+		6EB62A08961EE8DB1B6B3235 /* Case8DataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB629E01758AD50898C872D /* Case8DataEntity.m */; };
+		F41FEA771C12C91000B04261 /* Case8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA761C12C91000B04261 /* Case8ViewController.m */; };
+		F41FEA7A1C12CB7900B04261 /* Case8Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA791C12CB7900B04261 /* Case8Cell.m */; };
 		F46ECD961B10452E00FFB893 /* Case2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46ECD951B10452E00FFB893 /* Case2ViewController.m */; };
 		F48786DD1C0AECD300003A6C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48786DC1C0AECD300003A6C /* MainViewController.m */; };
 		F48786E11C0B60AB00003A6C /* Case7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48786E01C0B60AB00003A6C /* Case7ViewController.m */; };
@@ -39,8 +43,16 @@
 
 /* Begin PBXFileReference section */
 		4A01958B60EA9771760AEACF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6EB6205D8C792F2FB2F8172E /* Case8DataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case8DataEntity.h; sourceTree = "<group>"; };
+		6EB628ED6E403D2F244E7D24 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		6EB629E01758AD50898C872D /* Case8DataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case8DataEntity.m; sourceTree = "<group>"; };
+		6EB62C0A4C3EB058F88AB062 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		7FC8DFFE1D4BF90043040535 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		94D4615DC879B91FF452B37C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41FEA751C12C91000B04261 /* Case8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case8ViewController.h; sourceTree = "<group>"; };
+		F41FEA761C12C91000B04261 /* Case8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case8ViewController.m; sourceTree = "<group>"; };
+		F41FEA781C12CB7900B04261 /* Case8Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case8Cell.h; sourceTree = "<group>"; };
+		F41FEA791C12CB7900B04261 /* Case8Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case8Cell.m; sourceTree = "<group>"; };
 		F46ECD941B10452E00FFB893 /* Case2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case2ViewController.h; sourceTree = "<group>"; };
 		F46ECD951B10452E00FFB893 /* Case2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case2ViewController.m; sourceTree = "<group>"; };
 		F48786DB1C0AECD300003A6C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -104,12 +116,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6EB62423A565E621BE5BA820 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6EB628ED6E403D2F244E7D24 /* Common.m */,
+				6EB62C0A4C3EB058F88AB062 /* Common.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		760AA817ACE697446FDCC15C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				94D4615DC879B91FF452B37C /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F41FEA731C12C53D00B04261 /* Case8 */ = {
+			isa = PBXGroup;
+			children = (
+				F41FEA751C12C91000B04261 /* Case8ViewController.h */,
+				F41FEA761C12C91000B04261 /* Case8ViewController.m */,
+				F41FEA781C12CB7900B04261 /* Case8Cell.h */,
+				F41FEA791C12CB7900B04261 /* Case8Cell.m */,
+				6EB629E01758AD50898C872D /* Case8DataEntity.m */,
+				6EB6205D8C792F2FB2F8172E /* Case8DataEntity.h */,
+			);
+			name = Case8;
+			sourceTree = "<group>";
+		};
+		F41FEA741C12C54300B04261 /* Case9 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Case9;
 			sourceTree = "<group>";
 		};
 		F48786DE1C0B609900003A6C /* Case7 */ = {
@@ -204,21 +245,24 @@
 		F4FC74391B0332FE000C6AE9 /* MasonryExample */ = {
 			isa = PBXGroup;
 			children = (
-				F4D738C11B6E44D900CCA111 /* Images.xcassets */,
-				F48786DE1C0B609900003A6C /* Case7 */,
-				F4D738BA1B6E3EFD00CCA111 /* Case6 */,
-				F4D738B61B6E142100CCA111 /* Case5 */,
-				F4A2CE691B6A90A200739D9D /* Case4 */,
-				F4A2CE681B6A909D00739D9D /* Case3 */,
-				F4A2CE671B6A909800739D9D /* Case2 */,
-				F4A2CE661B6A909000739D9D /* Case1 */,
 				F4FC743E1B0332FE000C6AE9 /* AppDelegate.h */,
+				F48786DB1C0AECD300003A6C /* MainViewController.h */,
 				F4FC743F1B0332FE000C6AE9 /* AppDelegate.m */,
+				F48786DC1C0AECD300003A6C /* MainViewController.m */,
+				F4D738C11B6E44D900CCA111 /* Images.xcassets */,
+				F4A2CE661B6A909000739D9D /* Case1 */,
+				F4A2CE671B6A909800739D9D /* Case2 */,
+				F4A2CE681B6A909D00739D9D /* Case3 */,
+				F4A2CE691B6A90A200739D9D /* Case4 */,
+				F4D738B61B6E142100CCA111 /* Case5 */,
+				F4D738BA1B6E3EFD00CCA111 /* Case6 */,
+				F48786DE1C0B609900003A6C /* Case7 */,
+				F41FEA731C12C53D00B04261 /* Case8 */,
+				F41FEA741C12C54300B04261 /* Case9 */,
 				F4FC74491B0332FE000C6AE9 /* LaunchScreen.xib */,
 				F4FC74441B0332FE000C6AE9 /* Main.storyboard */,
 				F4FC743A1B0332FE000C6AE9 /* Supporting Files */,
-				F48786DB1C0AECD300003A6C /* MainViewController.h */,
-				F48786DC1C0AECD300003A6C /* MainViewController.m */,
+				6EB62423A565E621BE5BA820 /* Common */,
 			);
 			path = MasonryExample;
 			sourceTree = "<group>";
@@ -401,6 +445,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C204CB1B107B5200FA4E26 /* Case3ViewController.m in Sources */,
+				F41FEA771C12C91000B04261 /* Case8ViewController.m in Sources */,
+				F41FEA7A1C12CB7900B04261 /* Case8Cell.m in Sources */,
 				F4A2CE651B6A8FA900739D9D /* Case4ViewController.m in Sources */,
 				F4D738C01B6E433900CCA111 /* Case6ItemView.m in Sources */,
 				F4FC74431B0332FE000C6AE9 /* Case1ViewController.m in Sources */,
@@ -413,6 +459,8 @@
 				F4D738B91B6E144100CCA111 /* Case5ViewController.m in Sources */,
 				F4FC743D1B0332FE000C6AE9 /* main.m in Sources */,
 				F48786E11C0B60AB00003A6C /* Case7ViewController.m in Sources */,
+				6EB62A08961EE8DB1B6B3235 /* Case8DataEntity.m in Sources */,
+				6EB620F5D4987AA9D5FFFDF3 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
