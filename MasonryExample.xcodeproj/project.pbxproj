@@ -12,6 +12,7 @@
 		6EB62A08961EE8DB1B6B3235 /* Case8DataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB629E01758AD50898C872D /* Case8DataEntity.m */; };
 		F41FEA771C12C91000B04261 /* Case8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA761C12C91000B04261 /* Case8ViewController.m */; };
 		F41FEA7A1C12CB7900B04261 /* Case8Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA791C12CB7900B04261 /* Case8Cell.m */; };
+		F41FEA7D1C130D9600B04261 /* Case9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA7C1C130D9600B04261 /* Case9ViewController.m */; };
 		F46ECD961B10452E00FFB893 /* Case2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46ECD951B10452E00FFB893 /* Case2ViewController.m */; };
 		F48786DD1C0AECD300003A6C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48786DC1C0AECD300003A6C /* MainViewController.m */; };
 		F48786E11C0B60AB00003A6C /* Case7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48786E01C0B60AB00003A6C /* Case7ViewController.m */; };
@@ -53,6 +54,8 @@
 		F41FEA761C12C91000B04261 /* Case8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case8ViewController.m; sourceTree = "<group>"; };
 		F41FEA781C12CB7900B04261 /* Case8Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case8Cell.h; sourceTree = "<group>"; };
 		F41FEA791C12CB7900B04261 /* Case8Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case8Cell.m; sourceTree = "<group>"; };
+		F41FEA7B1C130D9600B04261 /* Case9ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case9ViewController.h; sourceTree = "<group>"; };
+		F41FEA7C1C130D9600B04261 /* Case9ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case9ViewController.m; sourceTree = "<group>"; };
 		F46ECD941B10452E00FFB893 /* Case2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case2ViewController.h; sourceTree = "<group>"; };
 		F46ECD951B10452E00FFB893 /* Case2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case2ViewController.m; sourceTree = "<group>"; };
 		F48786DB1C0AECD300003A6C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 		F41FEA741C12C54300B04261 /* Case9 */ = {
 			isa = PBXGroup;
 			children = (
+				F41FEA7B1C130D9600B04261 /* Case9ViewController.h */,
+				F41FEA7C1C130D9600B04261 /* Case9ViewController.m */,
 			);
 			name = Case9;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				F4A2CE6C1B6A90D500739D9D /* Case4DataEntity.m in Sources */,
 				F4D738BD1B6E3F0800CCA111 /* Case6ViewController.m in Sources */,
 				F48786DD1C0AECD300003A6C /* MainViewController.m in Sources */,
+				F41FEA7D1C130D9600B04261 /* Case9ViewController.m in Sources */,
 				F4FC74401B0332FE000C6AE9 /* AppDelegate.m in Sources */,
 				F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */,
 				F4D738B91B6E144100CCA111 /* Case5ViewController.m in Sources */,
