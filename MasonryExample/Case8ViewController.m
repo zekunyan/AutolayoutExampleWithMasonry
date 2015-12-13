@@ -45,12 +45,16 @@
     case8DataEntity.expanded = !case8DataEntity.expanded; // 切换展开还是收回
     case8DataEntity.cellHeight = 0; // 重置高度缓存
     
-    // 只会重新计算高度,不会reload cell,所以只是把原来的cell撑大了而已,还是同一个cell实例
-//    [_tableView beginUpdates];
-//    [_tableView endUpdates];
+    // **********************************
+    // 下面两种方法均可实现高度更新，都尝试下吧
+    // **********************************
+    
+    // 刷新方法1：只会重新计算高度,不会reload cell,所以只是把原来的cell撑大了而已,还是同一个cell实例
+    [_tableView beginUpdates];
+    [_tableView endUpdates];
 
-    // 先重新计算高度,然后reload,不是原来的cell实例
-    [_tableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
+    // 刷新方法2：先重新计算高度,然后reload,不是原来的cell实例
+//    [_tableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource

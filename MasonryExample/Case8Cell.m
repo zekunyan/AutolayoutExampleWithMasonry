@@ -39,7 +39,7 @@
 - (void)setEntity:(Case8DataEntity *)entity indexPath:(NSIndexPath *)indexPath {
     _entity = entity;
     _indexPath = indexPath;
-    _titleLabel.text = [NSString stringWithFormat:@"index: %d, address: %p", indexPath.row, (__bridge void*)self];
+    _titleLabel.text = [NSString stringWithFormat:@"index: %d, contentView: %p", indexPath.row, (__bridge void*)self.contentView];
     _contentLabel.text = entity.content;
 
     if (_entity.expanded) {
@@ -57,7 +57,13 @@
 
 #pragma mark - Private method
 
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"frame"];
+}
+
 - (void)initView {
+    [self addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    
     // Title
     _titleLabel = [UILabel new];
     [self.contentView addSubview:_titleLabel];
@@ -97,6 +103,16 @@
         // 先加上高度的限制
         _contentHeightConstraint = make.height.equalTo(@64).with.priorityHigh(); // 优先级只设置成High,比正常的高度约束低一些,防止冲突
     }];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    NSValue *frameValue = change[NSKeyValueChangeOldKey];
+    CGFloat oldHeight = [frameValue CGRectValue].size.height;
+    
+    frameValue = change[NSKeyValueChangeNewKey];
+    CGFloat newHeight = [frameValue CGRectValue].size.height;
+    
+    NSLog(@"contentView: %p, height change from: %g, to: %g.", (__bridge void*)self.contentView, oldHeight, newHeight);
 }
 
 @end
