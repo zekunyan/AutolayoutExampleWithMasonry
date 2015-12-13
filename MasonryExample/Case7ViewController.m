@@ -21,6 +21,10 @@ static NSString *CellIdentifier = @"Cell";
 
 @implementation Case7ViewController
 
+- (void)dealloc {
+    [_tableView removeObserver:self forKeyPath:@"contentOffset"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -41,13 +45,29 @@ static NSString *CellIdentifier = @"Cell";
     return cell;
 }
 
-#pragma mark - UIScrollViewDelegate
+// *************************
+// 两种方法监听contentOffset
+// *************************
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView.contentOffset.y < 0) {
-        _parallaxHeaderHeightConstraint.equalTo(@(ParallaxHeaderHeight - scrollView.contentOffset.y));
-    } else {
-        _parallaxHeaderHeightConstraint.equalTo(@(ParallaxHeaderHeight));
+// 方法1：直接在scrollViewDidScroll:刷新
+//#pragma mark - UIScrollViewDelegate
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    if (scrollView.contentOffset.y < 0) {
+//        _parallaxHeaderHeightConstraint.equalTo(@(ParallaxHeaderHeight - scrollView.contentOffset.y));
+//    } else {
+//        _parallaxHeaderHeightConstraint.equalTo(@(ParallaxHeaderHeight));
+//    }
+//}
+
+// 方法2：利用KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"contentOffset"]) {
+        CGPoint contentOffset = ((NSValue *)change[NSKeyValueChangeNewKey]).CGPointValue;
+        if (contentOffset.y < 0) {
+            _parallaxHeaderHeightConstraint.equalTo(@(ParallaxHeaderHeight - contentOffset.y));
+        } else {
+            _parallaxHeaderHeightConstraint.equalTo(@(ParallaxHeaderHeight));
+        }
     }
 }
 
@@ -71,6 +91,9 @@ static NSString *CellIdentifier = @"Cell";
         make.top.equalTo(self.mas_topLayoutGuideBottom);
         _parallaxHeaderHeightConstraint = make.height.equalTo(@(ParallaxHeaderHeight));
     }];
+    
+    // Add KVO
+    [_tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)createFakeTableHeader {

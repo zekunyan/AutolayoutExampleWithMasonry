@@ -23,6 +23,10 @@
 
 @implementation Case8Cell
 
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"frame"];
+}
+
 #pragma mark - Init
 
 // 调用UITableView的dequeueReusableCellWithIdentifier方法时会通过这个方法初始化Cell
@@ -56,10 +60,6 @@
 }
 
 #pragma mark - Private method
-
-- (void)dealloc {
-    [self removeObserver:self forKeyPath:@"frame"];
-}
 
 - (void)initView {
     [self addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
