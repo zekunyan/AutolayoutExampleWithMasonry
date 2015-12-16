@@ -71,10 +71,10 @@
 
     // 判断高度是否已经计算过
     if (dataEntity.cellHeight <= 0) {
-        // 根据当前数据，计算Cell的高度，注意+1
-        dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 0.5f;
         // 填充数据
         [templateCell setupData:dataEntity];
+        // 根据当前数据，计算Cell的高度，注意+1
+        dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 0.5f;
         NSLog(@"Calculate height: %ld", (long) indexPath.row);
     } else {
         NSLog(@"Get cache %ld", (long) indexPath.row);

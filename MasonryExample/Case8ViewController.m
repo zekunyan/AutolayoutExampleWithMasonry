@@ -76,7 +76,7 @@
     // 判断高度是否已经计算过
     if (dataEntity.cellHeight <= 0) {
         // 填充数据
-        [templateCell setEntity:dataEntity indexPath:[NSIndexPath indexPathForRow:-1 inSection:-1]];
+        [templateCell setEntity:dataEntity indexPath:[NSIndexPath indexPathForRow:-1 inSection:-1]]; // 设置-1只是为了方便调试，在log里面可以分辨出哪个cell被调用
         // 根据当前数据，计算Cell的高度，注意+1
         dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 0.5f;
         NSLog(@"Calculate height: %ld", (long) indexPath.row);

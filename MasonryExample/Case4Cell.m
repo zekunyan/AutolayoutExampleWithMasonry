@@ -62,7 +62,7 @@
     }];
 
     // 计算UILabel的preferredMaxLayoutWidth值，多行时必须设置这个值，否则系统无法决定Label的宽度
-    CGFloat preferredMaxWidth = [UIScreen mainScreen].bounds.size.width - 8;
+    CGFloat preferredMaxWidth = [UIScreen mainScreen].bounds.size.width - 44 - 4 * 3; // 44 = avatar宽度，4 * 3为padding
 
     // Content - 多行
     _contentLabel = [UILabel new];
