@@ -30,7 +30,6 @@ static NSString *CellIdentifier = @"Cell";
     
     [self configTableView];
     [self initView];
-    [self createFakeTableHeader];
 }
 
 #pragma mark - UITableViewDataSource
@@ -63,10 +62,8 @@ static NSString *CellIdentifier = @"Cell";
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"contentOffset"]) {
         CGPoint contentOffset = ((NSValue *)change[NSKeyValueChangeNewKey]).CGPointValue;
-        if (contentOffset.y < 0) {
-            _parallaxHeaderHeightConstraint.equalTo(@(ParallaxHeaderHeight - contentOffset.y));
-        } else {
-            _parallaxHeaderHeightConstraint.equalTo(@(ParallaxHeaderHeight));
+        if (contentOffset.y < -ParallaxHeaderHeight) {
+            _parallaxHeaderHeightConstraint.equalTo(@(-contentOffset.y));
         }
     }
 }
@@ -77,6 +74,7 @@ static NSString *CellIdentifier = @"Cell";
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.contentInset = UIEdgeInsetsMake(ParallaxHeaderHeight, 0, 0, 0);
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 }
 
@@ -94,13 +92,6 @@ static NSString *CellIdentifier = @"Cell";
     
     // Add KVO
     [_tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
-}
-
-- (void)createFakeTableHeader {
-    UIView *fakeTableHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_tableView.frame), ParallaxHeaderHeight)];
-    fakeTableHeader.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    fakeTableHeader.backgroundColor = [UIColor clearColor];
-    _tableView.tableHeaderView = fakeTableHeader;
 }
 
 @end
