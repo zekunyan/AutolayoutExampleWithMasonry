@@ -43,7 +43,7 @@
 - (void)setEntity:(Case8DataEntity *)entity indexPath:(NSIndexPath *)indexPath {
     _entity = entity;
     _indexPath = indexPath;
-    _titleLabel.text = [NSString stringWithFormat:@"index: %d, contentView: %p", indexPath.row, (__bridge void*)self.contentView];
+    _titleLabel.text = [NSString stringWithFormat:@"index: %ld, contentView: %p", (long) indexPath.row, (__bridge void *) self.contentView];
     _contentLabel.text = entity.content;
 
     if (_entity.expanded) {
@@ -63,7 +63,7 @@
 
 - (void)initView {
     [self addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    
+
     // Title
     _titleLabel = [UILabel new];
     [self.contentView addSubview:_titleLabel];
@@ -105,14 +105,14 @@
     }];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *, id> *)change context:(void *)context {
     NSValue *frameValue = change[NSKeyValueChangeOldKey];
     CGFloat oldHeight = [frameValue CGRectValue].size.height;
-    
+
     frameValue = change[NSKeyValueChangeNewKey];
     CGFloat newHeight = [frameValue CGRectValue].size.height;
-    
-    NSLog(@"contentView: %p, height change from: %g, to: %g.", (__bridge void*)self.contentView, oldHeight, newHeight);
+
+    NSLog(@"contentView: %p, height change from: %g, to: %g.", (__bridge void *) self.contentView, oldHeight, newHeight);
 }
 
 @end

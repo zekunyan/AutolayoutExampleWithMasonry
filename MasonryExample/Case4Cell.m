@@ -20,10 +20,6 @@
 
 @implementation Case4Cell
 
-- (void)dealloc {
-    NSLog(@"Case4Cell dealloc: %ld", (long) self.tag);
-}
-
 // 调用UITableView的dequeueReusableCellWithIdentifier方法时会通过这个方法初始化Cell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

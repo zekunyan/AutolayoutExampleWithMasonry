@@ -62,7 +62,7 @@
 #else
 
     if (!_templateCell) {
-        _templateCell = [[Case4Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([Case4Cell class])];
+        _templateCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([Case4Cell class])];
         _templateCell.tag = -1000; // For debug dealloc
     }
 
