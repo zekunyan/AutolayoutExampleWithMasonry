@@ -11,14 +11,18 @@
 #import "Masonry.h"
 
 @interface Case4Cell ()
-@property(nonatomic, strong) UIImageView *avatarImageView;
-@property(nonatomic, strong) UILabel *titleLabel;
-@property(nonatomic, strong) UILabel *contentLabel;
+@property (nonatomic, strong) UIImageView *avatarImageView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *contentLabel;
 
-@property(nonatomic, weak) Case4DataEntity *dataEntity;
+@property (nonatomic, weak) Case4DataEntity *dataEntity;
 @end
 
 @implementation Case4Cell
+
+- (void)dealloc {
+    NSLog(@"Case4Cell dealloc: %ld", (long) self.tag);
+}
 
 // 调用UITableView的dequeueReusableCellWithIdentifier方法时会通过这个方法初始化Cell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -42,6 +46,8 @@
 #pragma mark - Private methods
 
 - (void)initView {
+    self.tag = 1000;
+
     // Avatar头像
     _avatarImageView = [UIImageView new];
     [self.contentView addSubview:_avatarImageView];

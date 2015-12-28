@@ -13,6 +13,7 @@
 
 @interface Case8ViewController () <UITableViewDelegate, UITableViewDataSource, Case8CellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) Case8Cell *templateCell;
 
 @property (nonatomic, strong) NSArray *data;
 @end
@@ -44,17 +45,17 @@
     Case8DataEntity *case8DataEntity = _data[(NSUInteger) index.row];
     case8DataEntity.expanded = !case8DataEntity.expanded; // 切换展开还是收回
     case8DataEntity.cellHeight = 0; // 重置高度缓存
-    
+
     // **********************************
     // 下面两种方法均可实现高度更新，都尝试下吧
     // **********************************
-    
+
     // 刷新方法1：只会重新计算高度,不会reload cell,所以只是把原来的cell撑大了而已,还是同一个cell实例
-    [_tableView beginUpdates];
-    [_tableView endUpdates];
+//    [_tableView beginUpdates];
+//    [_tableView endUpdates];
 
     // 刷新方法2：先重新计算高度,然后reload,不是原来的cell实例
-//    [_tableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
+    [_tableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
@@ -64,11 +65,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static Case8Cell *templateCell;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        templateCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([Case8Cell class])];
-    });
+    if (!_templateCell) {
+        _templateCell = [[Case8Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([Case8Cell class])];
+    }
 
     // 获取对应的数据
     Case8DataEntity *dataEntity = _data[(NSUInteger) indexPath.row];
@@ -76,9 +75,9 @@
     // 判断高度是否已经计算过
     if (dataEntity.cellHeight <= 0) {
         // 填充数据
-        [templateCell setEntity:dataEntity indexPath:[NSIndexPath indexPathForRow:-1 inSection:-1]]; // 设置-1只是为了方便调试，在log里面可以分辨出哪个cell被调用
+        [_templateCell setEntity:dataEntity indexPath:[NSIndexPath indexPathForRow:-1 inSection:-1]]; // 设置-1只是为了方便调试，在log里面可以分辨出哪个cell被调用
         // 根据当前数据，计算Cell的高度，注意+1
-        dataEntity.cellHeight = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 0.5f;
+        dataEntity.cellHeight = [_templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 0.5f;
         NSLog(@"Calculate height: %ld", (long) indexPath.row);
     } else {
         NSLog(@"Get cache %ld", (long) indexPath.row);
