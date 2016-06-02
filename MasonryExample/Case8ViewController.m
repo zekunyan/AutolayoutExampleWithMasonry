@@ -25,7 +25,6 @@
 
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.estimatedRowHeight = 80.0f;
 
     // 注册Cell
     [_tableView registerClass:[Case8Cell class] forCellReuseIdentifier:NSStringFromClass([Case8Cell class])];
@@ -51,11 +50,14 @@
     // **********************************
 
     // 刷新方法1：只会重新计算高度,不会reload cell,所以只是把原来的cell撑大了而已,还是同一个cell实例
-//    [_tableView beginUpdates];
-//    [_tableView endUpdates];
+    [_tableView beginUpdates];
+    [_tableView endUpdates];
 
     // 刷新方法2：先重新计算高度,然后reload,不是原来的cell实例
-    [_tableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
+//    [_tableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationFade];
+    
+    // 让展开/收回的Cell居中，酌情加，看效果决定
+    [_tableView scrollToRowAtIndexPath:index atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
