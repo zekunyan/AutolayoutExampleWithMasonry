@@ -506,6 +506,33 @@
                                             <segue destination="y24-F0-fql" kind="show" id="kiw-Rh-QxZ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Yng-bB-iMf" detailTextLabel="Ohe-HD-oBY" style="IBUITableViewCellStyleValue1" id="ofg-qP-T3g">
+                                        <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ofg-qP-T3g" id="lqN-7S-04p">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Case 11" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" id="Yng-bB-iMf">
+                                                    <rect key="frame" x="15" y="12" width="56" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Autolayout的“捆绑”特性" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ohe-HD-oBY">
+                                                    <rect key="frame" x="112" y="12" width="173" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="OP6-W4-AZQ" kind="show" id="R9Q-qU-kDn"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -618,15 +645,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znR-vd-WvS">
                                 <rect key="frame" x="20" y="77" width="280" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="sjG-dK-Y8H"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="巧用优先级保证内容的可见性" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6i-BL-Es6" userLabel="instructionLabel">
-                                <rect key="frame" x="20" y="508" width="280" height="52"/>
+                                <rect key="frame" x="20" y="445" width="280" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="8tE-gs-Fbp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拖动上方的灰色View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbQ-Q5-Rar" userLabel="instructionLabel">
-                                <rect key="frame" x="20" y="448" width="280" height="52"/>
+                                <rect key="frame" x="20" y="385" width="280" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="PNQ-z6-abD"/>
                                 </constraints>
@@ -640,11 +673,9 @@
                             <constraint firstAttribute="trailing" secondItem="znR-vd-WvS" secondAttribute="trailing" constant="20" id="1Hh-PA-vW5"/>
                             <constraint firstItem="znR-vd-WvS" firstAttribute="leading" secondItem="qBU-kw-rE5" secondAttribute="leading" constant="20" id="8pV-Qg-EQp"/>
                             <constraint firstItem="znR-vd-WvS" firstAttribute="top" secondItem="5rQ-TU-kVX" secondAttribute="bottom" constant="13" id="EXW-4O-qZw"/>
-                            <constraint firstItem="S6i-BL-Es6" firstAttribute="top" secondItem="znR-vd-WvS" secondAttribute="bottom" constant="131" id="Fad-1q-PDj"/>
                             <constraint firstItem="AbQ-Q5-Rar" firstAttribute="leading" secondItem="qBU-kw-rE5" secondAttribute="leading" constant="20" id="Fo1-EG-FfA"/>
-                            <constraint firstItem="e60-uO-Y5c" firstAttribute="top" secondItem="znR-vd-WvS" secondAttribute="bottom" constant="191" id="Oaf-ZO-Msh"/>
                             <constraint firstAttribute="trailing" secondItem="AbQ-Q5-Rar" secondAttribute="trailing" constant="20" id="WGQ-NE-U0a"/>
-                            <constraint firstItem="e60-uO-Y5c" firstAttribute="top" secondItem="S6i-BL-Es6" secondAttribute="bottom" constant="8" id="ZKq-gO-q4M"/>
+                            <constraint firstItem="AbQ-Q5-Rar" firstAttribute="top" secondItem="znR-vd-WvS" secondAttribute="bottom" constant="8" id="cGH-cq-lCh"/>
                             <constraint firstAttribute="trailing" secondItem="S6i-BL-Es6" secondAttribute="trailing" constant="20" id="jnO-r0-POc"/>
                             <constraint firstItem="S6i-BL-Es6" firstAttribute="top" secondItem="AbQ-Q5-Rar" secondAttribute="bottom" constant="8" id="oMm-qZ-oTl"/>
                             <constraint firstItem="S6i-BL-Es6" firstAttribute="leading" secondItem="qBU-kw-rE5" secondAttribute="leading" constant="20" id="sx8-1C-Ys2"/>
@@ -657,7 +688,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apD-br-udo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="3559"/>
+            <point key="canvasLocation" x="-493" y="3209"/>
+        </scene>
+        <!--Autolayout的“捆绑”特性-->
+        <scene sceneID="3bZ-i3-1xB">
+            <objects>
+                <viewController title="Autolayout的“捆绑”特性" id="OP6-W4-AZQ" customClass="Case11ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eHr-Dk-Fva"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dfv-Qt-5sv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AGX-3o-i92">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpY-lf-huB">
+                                <rect key="frame" x="20" y="72" width="280" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="cpz-6R-ath"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autolayout的“捆绑”特性" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDZ-0o-S3X" userLabel="instructionLabel">
+                                <rect key="frame" x="20" y="440" width="280" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Tva-Vm-5nB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拖动上方的灰色View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0W-EN-dET" userLabel="instructionLabel">
+                                <rect key="frame" x="20" y="380" width="280" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="dIw-IA-ggb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tDZ-0o-S3X" firstAttribute="leading" secondItem="AGX-3o-i92" secondAttribute="leading" constant="20" id="1Di-M5-2wT"/>
+                            <constraint firstAttribute="trailing" secondItem="Y0W-EN-dET" secondAttribute="trailing" constant="20" id="Hf3-En-ThS"/>
+                            <constraint firstItem="Y0W-EN-dET" firstAttribute="top" secondItem="zpY-lf-huB" secondAttribute="bottom" constant="8" id="Owf-Wc-qcC"/>
+                            <constraint firstAttribute="trailing" secondItem="tDZ-0o-S3X" secondAttribute="trailing" constant="20" id="Qfd-hr-FZb"/>
+                            <constraint firstItem="tDZ-0o-S3X" firstAttribute="top" secondItem="Y0W-EN-dET" secondAttribute="bottom" constant="8" id="cNm-vW-DuQ"/>
+                            <constraint firstAttribute="trailing" secondItem="zpY-lf-huB" secondAttribute="trailing" constant="20" id="cvr-Yb-kTV"/>
+                            <constraint firstItem="zpY-lf-huB" firstAttribute="leading" secondItem="AGX-3o-i92" secondAttribute="leading" constant="20" id="hFV-cd-gOq"/>
+                            <constraint firstItem="zpY-lf-huB" firstAttribute="top" secondItem="eHr-Dk-Fva" secondAttribute="bottom" constant="8" id="oTO-1Q-9Sc"/>
+                            <constraint firstItem="Y0W-EN-dET" firstAttribute="leading" secondItem="AGX-3o-i92" secondAttribute="leading" constant="20" id="yfG-Qu-552"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="zpY-lf-huB" id="2M6-Cj-o2y"/>
+                        <outlet property="logLabel" destination="Y0W-EN-dET" id="bET-2f-k7G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NT3-NT-lRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="3387"/>
         </scene>
         <!--两种方式实现等间距-->
         <scene sceneID="L7H-hR-qPI">
