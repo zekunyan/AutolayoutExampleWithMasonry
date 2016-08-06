@@ -1,6 +1,8 @@
 # Autolayout Example With Masonry
 用Masonry实现的Autolayout示例。
 
+[![Build Status](https://travis-ci.org/zekunyan/AutolayoutExampleWithMasonry.svg?branch=master)](https://travis-ci.org/zekunyan/AutolayoutExampleWithMasonry)
+
 ![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_12.png?imageView2/0/w/480/q/100)
 
 ## 博客
