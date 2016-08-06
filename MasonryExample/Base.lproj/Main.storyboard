@@ -520,8 +520,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Autolayout的“捆绑”特性" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ohe-HD-oBY">
-                                                    <rect key="frame" x="167" y="12" width="173" height="20"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Autolayout的“动态绑定”特性" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ohe-HD-oBY">
+                                                    <rect key="frame" x="135" y="12" width="205" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -547,8 +547,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="利用layoutIfNeeded让约束立即生效" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="oFz-HO-7Gk">
-                                                    <rect key="frame" x="85" y="12" width="255" height="20"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="利用layoutIfNeeded控制约束生效时机" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="oFz-HO-7Gk">
+                                                    <rect key="frame" x="79" y="12" width="261" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -736,7 +736,7 @@
                                     <constraint firstAttribute="height" constant="300" id="cpz-6R-ath"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autolayout的“捆绑”特性" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDZ-0o-S3X" userLabel="instructionLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autolayout的“动态绑定”特性" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDZ-0o-S3X" userLabel="instructionLabel">
                                 <rect key="frame" x="20" y="440" width="335" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Tva-Vm-5nB"/>
@@ -795,7 +795,7 @@
                                     <constraint firstAttribute="height" constant="52" id="aCh-Si-Tgl"/>
                                 </constraints>
                                 <string key="text">利用layoutIfNeeded
-让约束立即生效</string>
+控制约束生效时机</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
