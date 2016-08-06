@@ -11,6 +11,7 @@
 		6EB620F5D4987AA9D5FFFDF3 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB628ED6E403D2F244E7D24 /* Common.m */; };
 		6EB62440A862D561C595E054 /* UIView+TTGHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB62E9270E25AB9F30C5F5F /* UIView+TTGHook.m */; };
 		6EB62A08961EE8DB1B6B3235 /* Case8DataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB629E01758AD50898C872D /* Case8DataEntity.m */; };
+		BF1CF0BE1D55F650002E71DF /* Case10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1CF0BD1D55F650002E71DF /* Case10ViewController.m */; };
 		F41FEA771C12C91000B04261 /* Case8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA761C12C91000B04261 /* Case8ViewController.m */; };
 		F41FEA7A1C12CB7900B04261 /* Case8Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA791C12CB7900B04261 /* Case8Cell.m */; };
 		F41FEA7D1C130D9600B04261 /* Case9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA7C1C130D9600B04261 /* Case9ViewController.m */; };
@@ -53,6 +54,8 @@
 		6EB62C0A4C3EB058F88AB062 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		6EB62E9270E25AB9F30C5F5F /* UIView+TTGHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTGHook.m"; sourceTree = "<group>"; };
 		9837C7336C60C75F97C3B6AA /* Pods-MasonryExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryExample/Pods-MasonryExample.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1CF0BC1D55F650002E71DF /* Case10ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case10ViewController.h; sourceTree = "<group>"; };
+		BF1CF0BD1D55F650002E71DF /* Case10ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case10ViewController.m; sourceTree = "<group>"; };
 		F41FEA751C12C91000B04261 /* Case8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case8ViewController.h; sourceTree = "<group>"; };
 		F41FEA761C12C91000B04261 /* Case8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case8ViewController.m; sourceTree = "<group>"; };
 		F41FEA781C12CB7900B04261 /* Case8Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case8Cell.h; sourceTree = "<group>"; };
@@ -138,6 +141,29 @@
 				6EB62E9270E25AB9F30C5F5F /* UIView+TTGHook.m */,
 			);
 			path = Debug;
+			sourceTree = "<group>";
+		};
+		BF1CF0B91D55F619002E71DF /* Case10 */ = {
+			isa = PBXGroup;
+			children = (
+				BF1CF0BC1D55F650002E71DF /* Case10ViewController.h */,
+				BF1CF0BD1D55F650002E71DF /* Case10ViewController.m */,
+			);
+			path = Case10;
+			sourceTree = "<group>";
+		};
+		BF1CF0BA1D55F623002E71DF /* Case11 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Case11;
+			sourceTree = "<group>";
+		};
+		BF1CF0BB1D55F62D002E71DF /* Case12 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Case12;
 			sourceTree = "<group>";
 		};
 		C00A74C04C7628456622BCAF /* Frameworks */ = {
@@ -262,6 +288,8 @@
 		F4FC74391B0332FE000C6AE9 /* MasonryExample */ = {
 			isa = PBXGroup;
 			children = (
+				F4FC743E1B0332FE000C6AE9 /* AppDelegate.h */,
+				F4FC743F1B0332FE000C6AE9 /* AppDelegate.m */,
 				F4A2CE661B6A909000739D9D /* Case1 */,
 				F4A2CE671B6A909800739D9D /* Case2 */,
 				F4A2CE681B6A909D00739D9D /* Case3 */,
@@ -271,16 +299,17 @@
 				F48786DE1C0B609900003A6C /* Case7 */,
 				F41FEA731C12C53D00B04261 /* Case8 */,
 				F41FEA741C12C54300B04261 /* Case9 */,
+				BF1CF0B91D55F619002E71DF /* Case10 */,
+				BF1CF0BA1D55F623002E71DF /* Case11 */,
+				BF1CF0BB1D55F62D002E71DF /* Case12 */,
 				6EB62423A565E621BE5BA820 /* Common */,
 				6EB625F4AA5B531FA4C40D47 /* Debug */,
-				F4FC743A1B0332FE000C6AE9 /* Supporting Files */,
-				F4FC743E1B0332FE000C6AE9 /* AppDelegate.h */,
-				F4FC743F1B0332FE000C6AE9 /* AppDelegate.m */,
 				F4D738C11B6E44D900CCA111 /* Images.xcassets */,
 				F4FC74491B0332FE000C6AE9 /* LaunchScreen.xib */,
 				F4FC74441B0332FE000C6AE9 /* Main.storyboard */,
 				F48786DB1C0AECD300003A6C /* MainViewController.h */,
 				F48786DC1C0AECD300003A6C /* MainViewController.m */,
+				F4FC743A1B0332FE000C6AE9 /* Supporting Files */,
 			);
 			path = MasonryExample;
 			sourceTree = "<group>";
@@ -479,6 +508,7 @@
 				F4FC743D1B0332FE000C6AE9 /* main.m in Sources */,
 				F48786E11C0B60AB00003A6C /* Case7ViewController.m in Sources */,
 				6EB62A08961EE8DB1B6B3235 /* Case8DataEntity.m in Sources */,
+				BF1CF0BE1D55F650002E71DF /* Case10ViewController.m in Sources */,
 				6EB620F5D4987AA9D5FFFDF3 /* Common.m in Sources */,
 				6EB62440A862D561C595E054 /* UIView+TTGHook.m in Sources */,
 			);
