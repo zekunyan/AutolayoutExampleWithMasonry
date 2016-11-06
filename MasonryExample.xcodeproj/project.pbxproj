@@ -14,6 +14,8 @@
 		BF1CF0BE1D55F650002E71DF /* Case10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1CF0BD1D55F650002E71DF /* Case10ViewController.m */; };
 		BF1CF0C11D55FF4A002E71DF /* Case11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1CF0C01D55FF4A002E71DF /* Case11ViewController.m */; };
 		BF1CF0C41D561AB4002E71DF /* Case12ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1CF0C31D561AB4002E71DF /* Case12ViewController.m */; };
+		BFBF08391DCE4ED300200600 /* Case13ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBF08381DCE4ED300200600 /* Case13ViewController.m */; };
+		BFBF083C1DCE529400200600 /* Case13TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBF083B1DCE529400200600 /* Case13TableViewCell.m */; };
 		F41FEA771C12C91000B04261 /* Case8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA761C12C91000B04261 /* Case8ViewController.m */; };
 		F41FEA7A1C12CB7900B04261 /* Case8Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA791C12CB7900B04261 /* Case8Cell.m */; };
 		F41FEA7D1C130D9600B04261 /* Case9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41FEA7C1C130D9600B04261 /* Case9ViewController.m */; };
@@ -62,6 +64,10 @@
 		BF1CF0C01D55FF4A002E71DF /* Case11ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case11ViewController.m; sourceTree = "<group>"; };
 		BF1CF0C21D561AB4002E71DF /* Case12ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case12ViewController.h; sourceTree = "<group>"; };
 		BF1CF0C31D561AB4002E71DF /* Case12ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case12ViewController.m; sourceTree = "<group>"; };
+		BFBF08371DCE4ED300200600 /* Case13ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case13ViewController.h; sourceTree = "<group>"; };
+		BFBF08381DCE4ED300200600 /* Case13ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case13ViewController.m; sourceTree = "<group>"; };
+		BFBF083A1DCE529400200600 /* Case13TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case13TableViewCell.h; sourceTree = "<group>"; };
+		BFBF083B1DCE529400200600 /* Case13TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case13TableViewCell.m; sourceTree = "<group>"; };
 		F41FEA751C12C91000B04261 /* Case8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case8ViewController.h; sourceTree = "<group>"; };
 		F41FEA761C12C91000B04261 /* Case8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Case8ViewController.m; sourceTree = "<group>"; };
 		F41FEA781C12CB7900B04261 /* Case8Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Case8Cell.h; sourceTree = "<group>"; };
@@ -174,6 +180,17 @@
 				BF1CF0C31D561AB4002E71DF /* Case12ViewController.m */,
 			);
 			path = Case12;
+			sourceTree = "<group>";
+		};
+		BFBF08361DCE4EB400200600 /* Case13 */ = {
+			isa = PBXGroup;
+			children = (
+				BFBF08371DCE4ED300200600 /* Case13ViewController.h */,
+				BFBF08381DCE4ED300200600 /* Case13ViewController.m */,
+				BFBF083A1DCE529400200600 /* Case13TableViewCell.h */,
+				BFBF083B1DCE529400200600 /* Case13TableViewCell.m */,
+			);
+			path = Case13;
 			sourceTree = "<group>";
 		};
 		C00A74C04C7628456622BCAF /* Frameworks */ = {
@@ -312,6 +329,7 @@
 				BF1CF0B91D55F619002E71DF /* Case10 */,
 				BF1CF0BA1D55F623002E71DF /* Case11 */,
 				BF1CF0BB1D55F62D002E71DF /* Case12 */,
+				BFBF08361DCE4EB400200600 /* Case13 */,
 				6EB62423A565E621BE5BA820 /* Common */,
 				6EB625F4AA5B531FA4C40D47 /* Debug */,
 				F4D738C11B6E44D900CCA111 /* Images.xcassets */,
@@ -504,6 +522,7 @@
 				F4C204CB1B107B5200FA4E26 /* Case3ViewController.m in Sources */,
 				F41FEA771C12C91000B04261 /* Case8ViewController.m in Sources */,
 				F41FEA7A1C12CB7900B04261 /* Case8Cell.m in Sources */,
+				BFBF083C1DCE529400200600 /* Case13TableViewCell.m in Sources */,
 				F4A2CE651B6A8FA900739D9D /* Case4ViewController.m in Sources */,
 				F4D738C01B6E433900CCA111 /* Case6ItemView.m in Sources */,
 				F4FC74431B0332FE000C6AE9 /* Case1ViewController.m in Sources */,
@@ -516,6 +535,7 @@
 				F4A2CE6F1B6A921100739D9D /* Case4Cell.m in Sources */,
 				F4D738B91B6E144100CCA111 /* Case5ViewController.m in Sources */,
 				F4FC743D1B0332FE000C6AE9 /* main.m in Sources */,
+				BFBF08391DCE4ED300200600 /* Case13ViewController.m in Sources */,
 				BF1CF0C11D55FF4A002E71DF /* Case11ViewController.m in Sources */,
 				F48786E11C0B60AB00003A6C /* Case7ViewController.m in Sources */,
 				6EB62A08961EE8DB1B6B3235 /* Case8DataEntity.m in Sources */,
