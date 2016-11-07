@@ -65,3 +65,5 @@
 ### Case12: 利用`layoutIfNeeded`控制约束的生效时机
 
 ![](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_15.png?imageView2/0/w/480/q/100)
+
+### Case13：Cell中并排多个变高Label
