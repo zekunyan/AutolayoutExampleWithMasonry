@@ -46,10 +46,6 @@
     return _data.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewAutomaticDimension;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     Case13TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCase13TableViewCellIdentifier forIndexPath:indexPath];
     [cell configWithTexts:_data[indexPath.row]];

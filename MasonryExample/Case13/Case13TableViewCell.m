@@ -37,21 +37,21 @@
     [self.contentView addSubview:_label3];
     
     [_label1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@100);
+        make.width.equalTo(@80);
         make.top.equalTo(self.contentView.mas_topMargin);
         make.left.equalTo(self.contentView.mas_leftMargin);
         make.bottom.lessThanOrEqualTo(self.contentView.mas_bottomMargin);
     }];
     
     [_label2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@100);
+        make.width.equalTo(@80);
         make.top.equalTo(self.contentView.mas_topMargin);
         make.centerX.equalTo(self.contentView.mas_centerX);
         make.bottom.lessThanOrEqualTo(self.contentView.mas_bottomMargin);
     }];
     
     [_label3 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@100);
+        make.width.equalTo(@80);
         make.top.equalTo(self.contentView.mas_topMargin);
         make.right.equalTo(self.contentView.mas_rightMargin);
         make.bottom.lessThanOrEqualTo(self.contentView.mas_bottomMargin);
