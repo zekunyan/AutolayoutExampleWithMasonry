@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/zekunyan/AutolayoutExampleWithMasonry.svg?branch=master)](https://travis-ci.org/zekunyan/AutolayoutExampleWithMasonry)
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_12.png?imageView2/0/w/480/q/100)
+![目录](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/demo_screenshot.png)
 
 ## 博客
 [有趣的Autolayout示例-Masonry实现](http://tutuge.me/2015/05/23/autolayout-example-with-masonry/)  
@@ -20,50 +20,61 @@
 
 ### Case1: 并排两个label，宽度由内容决定。父级View宽度不够时，优先显示左边label的内容
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_02.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case1.png)
 
 ### Case2: 四个ImageView整体居中，可以任意显示、隐藏
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_03.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case2.png)
 
 ### Case3: 子View的宽度始终是父级View的一半（或者任意百分比）
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_04.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case3.png)
 
 ### Case4: 动态高度UITableViewCell，附加简单的高度缓存
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_05.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case4.png)
 
 ### Case5: topLayoutGuide和bottomLayoutGuide使用案例
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_06.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case5.png)
 
 ### Case6: 自定义baseline效果
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_07.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case6.png)
 
 ### Case7: 给UITableView加上简单的Parallax视差效果Header
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_08.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case7.png)
 
 ### Case8: 实时改变UITableViewCell的高度
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_10.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case8.png)
 
 ### Case9: 等间距View
 
-![目录](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_11.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case9.png)
 
 ### Case10: 用约束优先级保证可移动View的内容可见性
 
-![](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_13.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case10.png)
 
 ### Case11: Autolayout的约束=控件间位置关系的“绑定”
 
-![](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_14.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case11.png)
 
 ### Case12: 利用`layoutIfNeeded`控制约束的生效时机
 
-![](http://7nj2iz.com1.z0.glb.clouddn.com/github_autolayout_example_with_masonry_15.png?imageView2/0/w/480/q/100)
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case12.png)
 
 ### Case13：Cell中并排多个变高Label
+
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case13.png)
+
+### Case14: 自定义View的intrinsicContentSize，并支持在UITableViewCell中自动计算高度
+
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case14.png)
+
+### Case15: 同一个属性可以添加多重约束
+
+![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case15.png)
+
