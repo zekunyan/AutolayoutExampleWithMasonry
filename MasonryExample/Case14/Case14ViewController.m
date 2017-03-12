@@ -23,7 +23,7 @@
     
     // 自动决定高度
     [_stairView setStairTitles:@[@"Masonry is a light-weight", @"layout framework which wraps", @"AutoLayout with a nicer syntax."]];
-    _stairView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.2];
+    _stairView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.1];
     
     // 数据
     _titles = @[@"AutoLayout", @"dynamically", @"calculates", @"the", @"size", @"and", @"position",

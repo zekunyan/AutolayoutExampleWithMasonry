@@ -18,7 +18,7 @@
         self.clipsToBounds = YES;
         
         _stairView = [Case14StairView new];
-        _stairView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.3];
+        _stairView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.1];
         [self.contentView addSubview:_stairView];
         
         [_stairView mas_makeConstraints:^(MASConstraintMaker *make) {
