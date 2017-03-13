@@ -39,10 +39,10 @@
     [_tableView reloadData];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
     
-    // iOS 10可能会有Bug，这里要刷新下
+    // UITableViewAutomaticDimension不会自动在外部frame变化时刷新，所以手动reload下
     [_tableView reloadData];
 }
 

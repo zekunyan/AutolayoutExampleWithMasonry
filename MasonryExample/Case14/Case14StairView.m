@@ -51,16 +51,18 @@
 
 - (void)updateStairLayout {
     if (_itemViews.count == 0) {
+        // 没有设置内容，内容大小为零
+        _contentSize = CGSizeZero;
         return;
     }
     
-    // 平均宽度
+    // 计算每个Label的平均宽度
     CGFloat eachLabelWidth = CGRectGetWidth(self.bounds) / (CGFloat)_itemViews.count;
     CGFloat lastY = 0;
     CGFloat lastX = 0;
     
     for (UILabel *label in _itemViews) {
-        // 计算高度
+        // 根据内容、当前width计算高度
         label.preferredMaxLayoutWidth = eachLabelWidth;
         CGFloat height = [label sizeThatFits:CGSizeMake(eachLabelWidth, 0)].height;
         
@@ -74,10 +76,16 @@
     }
     
     // 更新contentSize
-    _contentSize = CGSizeMake(CGRectGetWidth(self.bounds), lastY);
+    CGSize newContentSize = CGSizeMake(CGRectGetWidth(self.bounds), lastY);
     
-    // 通知外部IntrinsicContentSize失效
-    [self invalidateIntrinsicContentSize];
+    // 判断内容大小是否有变化
+    if (!CGSizeEqualToSize(newContentSize, _contentSize)) {
+        // 更新contentSize
+        _contentSize = newContentSize;
+        
+        // 通知外部IntrinsicContentSize失效
+        [self invalidateIntrinsicContentSize];
+    }
 }
 
 @end
