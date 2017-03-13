@@ -26,7 +26,7 @@
     _stairView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.1];
     
     // 数据
-    _titles = @[@"AutoLayout", @"dynamically", @"calculates", @"the", @"size", @"and", @"position",
+    _titles = @[@"AutoLayout AutoLayout AutoLayout", @"dynamically", @"calculates", @"the", @"size", @"and", @"position",
                 @"of", @"all", @"the", @"views", @"in", @"your", @"view", @"hierarchy", @"based",
                 @"on", @"constraints", @"placed", @"on", @"those", @"views"];
     
