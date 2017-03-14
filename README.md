@@ -18,6 +18,9 @@
 [有趣的Autolayout示例4-Masonry实现](http://tutuge.me/2016/08/06/autolayout-example-with-masonry4/)  
 讲解了Case10到Case12
 
+[有趣的Autolayout示例5-Masonry实现](http://tutuge.me/2017/03/12/autolayout-example-with-masonry5/)  
+讲解了Case13到Case15
+
 ### Case1: 并排两个label，宽度由内容决定。父级View宽度不够时，优先显示左边label的内容
 
 ![](https://github.com/zekunyan/AutolayoutExampleWithMasonry/raw/master/Resources/case1.png)
