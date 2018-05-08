@@ -38,23 +38,23 @@
     
     [_label1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@80);
-        make.top.equalTo(self.contentView.mas_topMargin);
-        make.left.equalTo(self.contentView.mas_leftMargin);
-        make.bottom.lessThanOrEqualTo(self.contentView.mas_bottomMargin);
+        make.top.equalTo(self.contentView.mas_top);
+        make.left.equalTo(self.contentView.mas_left);
+        make.bottom.lessThanOrEqualTo(self.contentView.mas_bottom);
     }];
     
     [_label2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@80);
-        make.top.equalTo(self.contentView.mas_topMargin);
+        make.top.equalTo(self.contentView.mas_top);
         make.centerX.equalTo(self.contentView.mas_centerX);
-        make.bottom.lessThanOrEqualTo(self.contentView.mas_bottomMargin);
+        make.bottom.lessThanOrEqualTo(self.contentView.mas_bottom);
     }];
     
     [_label3 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@80);
-        make.top.equalTo(self.contentView.mas_topMargin);
-        make.right.equalTo(self.contentView.mas_rightMargin);
-        make.bottom.lessThanOrEqualTo(self.contentView.mas_bottomMargin);
+        make.top.equalTo(self.contentView.mas_top);
+        make.right.equalTo(self.contentView.mas_right);
+        make.bottom.lessThanOrEqualTo(self.contentView.mas_bottom);
     }];
 }
 
